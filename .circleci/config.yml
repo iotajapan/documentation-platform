@@ -1,0 +1,62 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16
+    working_directory: ~/app
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: update-npm
+          command: 'sudo npm i -g npm@latest'
+      - restore_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Install Project
+          command: npm i
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Build
+          command: npm run build
+      - run:
+          name: Check dist
+          command: ls -la dist
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      # run tests!
+      # - run: yarn test
+  deploy:
+    docker:
+      - image: circleci/node:10.16
+    working_directory: ~/app
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm i
+      - run: git config user.name $GITHUB_NAME  # GitHubのアカウント情報を設定
+      - run: git config user.email $GITHUB_EMAIL
+      # - run: npm run build  # 公開ファイルを生成
+      - run: npm run deploy:gh-pages    # gh-pagesブランチへpush
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master

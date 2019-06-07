@@ -17,7 +17,8 @@
         "production": "react-static build",
         "build": "run-s build-index production",
         "serve": "serve dist -p 3000",
-        "lint": "eslint src/**/*.js"
+        "lint": "eslint src/**/*.js",
+        "deploy:gh-pages": "gh-pages -d dist -m 'chore: update [skip ci]' -t"
     },
     "engines": {
         "node": "10.x.x"
@@ -53,6 +54,7 @@
         "eslint-config-react-tools": "1.x.x",
         "eslint-plugin-react": "^7.12.2",
         "express": "^4.16.4",
+        "gh-pages": "^2.0.1",
         "mkdirp": "^0.5.1",
         "node-emoji": "^1.8.1",
         "npm-run-all": "^4.1.5",
