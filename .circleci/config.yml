@@ -6,6 +6,9 @@ jobs:
     working_directory: ~/app
     steps:
       - checkout
+      - run: |
+          git submodule sync
+          git submodule update --init
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
