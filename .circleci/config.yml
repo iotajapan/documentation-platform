@@ -43,6 +43,9 @@ jobs:
     working_directory: ~/app
     steps:
       - checkout
+      - run: |
+          git submodule sync
+          git submodule update --init
       - restore_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm i
