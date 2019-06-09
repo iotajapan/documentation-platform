@@ -1,4 +1,5 @@
 # IOTA Documentation [![CircleCI](https://circleci.com/gh/iotajapan/documentation-platform/tree/master.svg?style=svg)](https://circleci.com/gh/iotajapan/documentation-platform/tree/master)
+https://docs.iota.org の日本語訳のリポジトリです.
 
 This repository contains the web application which displays the documentation, the actual content is housed in its own repository [https://github.com/iotaledger/documentation.git](https://github.com/iotaledger/documentation.git)
 
