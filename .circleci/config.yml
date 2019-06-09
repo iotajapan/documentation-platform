@@ -27,7 +27,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Build
-          command: npm run build2
+          command: npm run build
       - run:
           name: Check dist
           command: ls -la dist
