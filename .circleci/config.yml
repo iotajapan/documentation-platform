@@ -48,7 +48,7 @@ jobs:
       - run: npm i
       - run: git config user.name $GITHUB_NAME  # GitHubのアカウント情報を設定
       - run: git config user.email $GITHUB_EMAIL
-      # - run: npm run build  # 公開ファイルを生成
+      - run: npm run build  # 公開ファイルを生成
       - run: npm run deploy:gh-pages    # gh-pagesブランチへpush
 
 workflows:
