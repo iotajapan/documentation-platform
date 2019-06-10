@@ -18,7 +18,7 @@
         "build": "run-s build-index production",
         "serve": "serve dist -p 3000",
         "lint": "eslint src/**/*.js",
-        "deploy:gh-pages": "gh-pages -d dist -m 'chore: update [skip ci]' -t -r 'https://iotajapan.com/documentatio-platform/'"
+        "deploy:gh-pages": "gh-pages -d dist -m 'chore: update [skip ci]' -t"
     },
     "engines": {
         "node": "10.x.x"
