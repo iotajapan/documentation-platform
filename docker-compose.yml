@@ -6,6 +6,6 @@ services:
       dockerfile: ./Dockerfile.local
     command: ash -c "npm i && npm run build-index && npm run start"
     ports:
-      - '3003:3000'
+      - '3000:3000'
     volumes:
       - .:/app
