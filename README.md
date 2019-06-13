@@ -1,10 +1,11 @@
 # IOTA Documentation [![CircleCI](https://circleci.com/gh/iotajapan/documentation-platform/tree/master.svg?style=svg)](https://circleci.com/gh/iotajapan/documentation-platform/tree/master)
 - https://docs.iota.org の日本語訳のリポジトリ.
+- Live Demo: https://docs.iotajapan.com
 
 # Usage
-## サイトをローカルで動かす
+## ローカルで動かす
 ```bash
-git clone git@github.com:iotajapan/documentation-platform.git
+git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
 cd documentation-platform
 npm i
 # サイトを立ち上げる
@@ -13,6 +14,21 @@ docker-compose up -d --build
 # サイトを停止する
 docker-compose down
 ```
+
+## nowにデプロイする
+```bash
+git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
+cd documentation-platform
+npm i
+npm run build-index
+now
+```
+
+## GitHub Pagesにデプロイする
+- https://github.com/iotajapan/documentation-platform/blob/master/.circleci/config.yml を参照のこと.
+
+Original↓
+---
 
 # IOTA Documentation
 This repository contains the web application which displays the documentation, the actual content is housed in its own repository [https://github.com/iotaledger/documentation.git](https://github.com/iotaledger/documentation.git)
