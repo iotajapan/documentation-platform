@@ -3,7 +3,7 @@
 - Live Demo: https://docs.iotajapan.com
 
 # Usage
-## ローカルで動かす
+## ローカルで動かす(Docker編)
 ```bash
 git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
 cd documentation-platform
@@ -13,6 +13,19 @@ docker-compose up -d --build
 # ブラウザで`localhost:3000`にアクセスする.
 # サイトを停止する
 docker-compose down
+```
+
+## ローカルで動かす(npm編)
+```bash
+git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
+cd documentation-platform
+npm i
+# サイトを立ち上げる
+npm run build-index
+npm run start
+# ブラウザで`localhost:3000`にアクセスする.
+# サイトを停止する
+CTL + c
 ```
 
 ## nowにデプロイする
