@@ -29,7 +29,7 @@ export function createPageTableOfContents(projectUrlParts, projects) {
 
     const projectVersionPages = getProjectVersionPages(project, projectUrlParts.projectVersion);
     let toc = [
-        { name: 'Introduction', link: '#root' }
+        { name: '序説', link: '#root' }
     ];
 
     if (projectVersionPages) {

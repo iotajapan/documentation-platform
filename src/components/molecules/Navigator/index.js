@@ -9,7 +9,7 @@ class Navigator extends React.Component {
         projects: ProjectsPropTypes,
         pathname: PropTypes.string
     };
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -36,11 +36,11 @@ class Navigator extends React.Component {
     render() {
         return (<section className="navigator">
             <Link href={this.state.previousUrl} className="navigator__back" disabled={!this.state.previousUrl}>
-                <div className="navigator__label">Prev</div>
+                <div className="navigator__label">前へ</div>
                 <span className="navigator__title">{this.state.previousTitle}</span>
             </Link>
             <Link href={this.state.nextUrl} className="navigator__next" disabled={!this.state.nextUrl}>
-                <div className="navigator__label">Next</div>
+                <div className="navigator__label">次へ</div>
                 <span className="navigator__title">{this.state.nextTitle}</span>
             </Link>
         </section>);

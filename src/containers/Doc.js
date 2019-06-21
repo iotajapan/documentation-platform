@@ -146,7 +146,7 @@ class Doc extends React.Component {
                     </section>
                     <section className="middle-column">
                         <div className="middle-toc">
-                            <TableOfContents items={this.state.pageTableOfContents} title="Sections On This Page" compact={true} history={this.props.history} />
+                            <TableOfContents items={this.state.pageTableOfContents} title="このページの節" compact={true} history={this.props.history} />
                         </div>
                         <Markdown
                             source={this.props.markdown}
@@ -159,7 +159,7 @@ class Doc extends React.Component {
                     </section>
                     <section className="right-column">
                         <ScrollInContainer bottomOffset={200}>
-                            <TableOfContents items={this.state.pageTableOfContents} title="Sections On This Page" history={this.props.history} />
+                            <TableOfContents items={this.state.pageTableOfContents} title="このページの節" history={this.props.history} />
                         </ScrollInContainer>
                     </section>
                     {this.props.viewData.enableFeedback && (

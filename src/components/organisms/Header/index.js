@@ -80,7 +80,7 @@ class Header extends React.Component {
                                 <div className="input-wrapper">
                                     <InputSearch
                                         className="input-search"
-                                        placeholder="Search for topics"
+                                        placeholder="トピック検索"
                                         onKeyUp={this.handleKeyUp}
                                         onSearch={this.onSearch}
                                     />

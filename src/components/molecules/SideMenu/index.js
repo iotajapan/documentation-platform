@@ -85,7 +85,7 @@ class SideMenu extends React.Component {
                     { 'side-menu__hidden': !this.props.isMenuOpen }
                 )}>
                     <h4 className="side-menu__caption">
-                        <span>Navigation</span>
+                        <span>ナビゲーション</span>
                         <button className="side-menu__close" onClick={this.handleCloseClick}></button>
                     </h4>
 
