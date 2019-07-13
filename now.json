@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "docs.iotajapan.com",
   "name": "iota-documentation",
   "builds": [{ "src": "package.json", "use": "@now/static-build" }]
 }

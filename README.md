@@ -32,9 +32,12 @@ CTL + c
 ```bash
 git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
 cd documentation-platform
+cd docs
+git pull
+cd ..
 npm i
 npm run build-index
-now
+now --target production
 ```
 
 ## GitHub Pagesにデプロイする
