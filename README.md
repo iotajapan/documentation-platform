@@ -5,7 +5,7 @@
 # Usage
 ## ローカルで動かす(Docker編)
 ```bash
-git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
+git clone --recurse-submodules git@github.com:iotajapan/documentation-platform.git
 cd documentation-platform
 npm i
 # サイトを立ち上げる
@@ -17,7 +17,7 @@ docker-compose down
 
 ## ローカルで動かす(npm編)
 ```bash
-git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
+git clone --recurse-submodules git@github.com:iotajapan/documentation-platform.git
 cd documentation-platform
 npm i
 # サイトを立ち上げる
@@ -30,7 +30,7 @@ CTL + c
 
 ## nowにデプロイする
 ```bash
-git clone --recursive-submodule git@github.com:iotajapan/documentation-platform.git
+git clone --recurse-submodules git@github.com:iotajapan/documentation-platform.git
 cd documentation-platform
 cd docs
 git pull
