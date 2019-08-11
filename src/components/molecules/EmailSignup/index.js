@@ -14,8 +14,8 @@ class EmailSignup extends React.PureComponent {
         return (<section className="email-signup">
             <div className="email-signup__wrapper">
                 <div className="email-signup__content">
-                    <Heading level={2} text="Stay up-to-date" />
-                    <Paragraph>Get the latest IOTA development news straight to your mailbox</Paragraph>
+                    <Heading level={2} text="最新情報" />
+                    <Paragraph>最新のIOTA開発ニュースをメールボックスに直接お届けします。</Paragraph>
                 </div>
                 <InputRegister apiEndpoint={this.props.apiEndpoint} />
             </div>

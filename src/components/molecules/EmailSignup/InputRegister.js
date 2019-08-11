@@ -33,7 +33,7 @@ class InputRegister extends React.Component {
         const { email } = this.state;
 
         if (!email || !this.validateEmail(email)) {
-            this.setState({ error: 'Please provide a valid e-mail address.' });
+            this.setState({ error: '有効なメールアドレスを入力してください。' });
         } else {
             this.setState({ loading: true }, async () => {
                 const response = await submitEmail(this.props.apiEndpoint, email);
@@ -61,13 +61,13 @@ class InputRegister extends React.Component {
                         <input
                             type="email"
                             className="input-register"
-                            placeholder="Add your email address"
+                            placeholder="メールアドレスを入力"
                             value={email}
                             disabled={loading}
                             onChange={this.handleInputChange}
                         />
                         <button className="input-register__button" type="submit" disabled={loading}>
-                            <span className="input-register__button-text">Register</span>
+                            <span className="input-register__button-text">登録</span>
                         </button>
                     </div>
                     <div className="error-message">
