@@ -37,7 +37,7 @@ git pull
 cd ..
 npm i
 npm run build-index
-now --target production
+now --prod
 ```
 
 ## GitHub Pagesにデプロイする
