@@ -38,3 +38,5 @@ node_modules
 /projects.json
 /projects-summary.log
 /*.bat
+
+.now
