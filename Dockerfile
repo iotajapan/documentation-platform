@@ -12,16 +12,15 @@ ARG CONFIG_ID
 RUN echo "CONFIG_ID=$CONFIG_ID"
 
 # Running required steps to prepare the app prod build
-RUN npm install
-RUN npm run build
-
-RUN rm -rf node_modules
-RUN rm -rf src
-RUN rm -rf docs
-RUN rm -rf public
-RUN rm package.json
-RUN npm install serve
-RUN apk del git
+RUN npm install \
+  && npm run build \
+  && rm -rf node_modules \
+  && rm -rf src \
+  && rm -rf docs \
+  && rm -rf public \
+  && rm package.json \
+  && npm install serve \
+  && apk del git
 
 EXPOSE 3000
 
